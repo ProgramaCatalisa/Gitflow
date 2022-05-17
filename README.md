@@ -1,2 +1,2 @@
 # Gitflow
-Repositório para exemplo de processo de trabalho com o gitflow
+Repositório para treino de processo de trabalho com o gitflow
