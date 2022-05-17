@@ -1,7 +1,7 @@
 package menu
 
-import ListaCompras.ListaCompras.Companion.informarNomeAlimento
-import ListaCompras.ListaCompras.Companion.informarQuantidadeVerduraGrao
+import listacompras.ListaCompras.Companion.informarNomeAlimento
+import listacompras.ListaCompras.Companion.informarQuantidadeVerduraGrao
 import kotlin.system.exitProcess
 
 class Menu {

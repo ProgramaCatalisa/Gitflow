@@ -1,4 +1,4 @@
-package ListaCompras
+package listacompras
 
 /*Aqui chamamos de lista de compras apenas para ter as funções específicas da lista de compras que o sistema exige,
 afinal é um sistema de lista de compras. Não confundir com o conceito de List do Kotlin*/
