@@ -27,7 +27,7 @@ class ListaCompras {
         }
 
         fun informarNomeAlimento(alimento: String): String {
-            println("Informe o nome nome alimento do tipo $alimento a ser adicionado na lista: ")
+            println("Informe o tipo $alimento a ser adicionado na lista: ")
             val nome = readln()
 
             if (nome.isEmpty() || nome.isBlank()) {
