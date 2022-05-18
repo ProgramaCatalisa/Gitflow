@@ -33,11 +33,14 @@ class Menu {
                     menu()
                 }
                 "legume", "outros" -> {
-                    //TODO: terminar de implementar lógica (1/3)
+                    val quantidade = informarQuantidadeVerduraGrao(alimento)
+                    val nome = informarNomeAlimento(alimento)
+                    listaAlimentos[nome] = quantidade
+                    menu()
                 }
                 "ver lista" -> {
                     //TODO: terminar de implementar lógica (2/3)
-                    /*listaAlimentos.forEach { alimento, quantidade ->  }*/
+//                    listaAlimentos.forEach { alimento, quantidade ->  }*/
                 }
                 "sair" -> {
                     println("Até breve!")
