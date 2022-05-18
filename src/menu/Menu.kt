@@ -41,13 +41,21 @@ class Menu {
                     menu()
                 }
                 "ver lista" -> {
-                    //TODO: terminar de implementar lógica (2/3)
-                    /*listaAlimentos.forEach { alimento, quantidade ->  }*/
+                        showAlimentos()
+                        menu()
+
                 }
+
                 "sair" -> {
                     println("Até breve!")
                     exitProcess(0)
                 }
+            }
+        }
+        fun showAlimentos(){
+            listaAlimentos.forEach { (nomeAlimento, qtd) ->
+                println("nome : $nomeAlimento , quantidade : $qtd")
+
             }
         }
 
