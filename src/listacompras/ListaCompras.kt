@@ -36,8 +36,21 @@ class ListaCompras {
             return nome
         }
 
-        fun informarQuantidadeLegumeOutros(alimento: String) {
-            //TODO:implementar lógica (3/3)
+        fun informarQuantidadeLegumeOutros(alimento: String): Double {
+            println("Informe a quantidade de $alimento: ")
+            val input = readln()
+
+            if (input.isEmpty() || input.isBlank()) {
+                throw UnsupportedOperationException("Não é permitido inserir valor vazio")
+            }
+
+            var qtd = 0.0
+                qtd = input.toDoubleOrNull() ?:-1.0
+                if (qtd < 0.0) {
+                    println("Formato inválido, tente novamente")
+                    informarQuantidadeLegumeOutros(alimento)
+                }
+            return qtd
         }
 
     }
