@@ -36,7 +36,6 @@ class ListaCompras {
             return nome
         }
 
-
         fun informarQuantidadeLegumeOutros(alimento: String): Double {
             println("Informe a quantidade de $alimento: ")
             val input = readln()
@@ -52,7 +51,6 @@ class ListaCompras {
                     informarQuantidadeLegumeOutros(alimento)
                 }
             return qtd
-
         }
 
     }
