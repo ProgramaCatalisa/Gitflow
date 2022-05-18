@@ -37,7 +37,7 @@ class ListaCompras {
         }
 
         fun informarQuantidadeLegumeOutros(alimento: String) {
-            //TODO:implementar lógica (3/3)
+            //TODO:implementar lógic3/3)
         }
 
     }
