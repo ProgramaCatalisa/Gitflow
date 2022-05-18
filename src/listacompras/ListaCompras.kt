@@ -45,17 +45,11 @@ class ListaCompras {
             }
 
             var qtd = 0.0
-            try {
-                qtd = input.toDouble()
+                qtd = input.toDoubleOrNull() ?:-1.0
                 if (qtd < 0.0) {
-                    println("Não é permitido números negativos, tente novamente")
+                    println("Formato inválido, tente novamente")
                     informarQuantidadeLegumeOutros(alimento)
                 }
-
-            } catch (exception: NumberFormatException) {
-                println("Não é permitido texto, somente número")
-                informarQuantidadeLegumeOutros(alimento)
-            }
             return qtd
         }
 
