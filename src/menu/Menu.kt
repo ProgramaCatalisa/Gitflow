@@ -9,7 +9,6 @@ class Menu {
     companion object {
         private var listaAlimentos: HashMap<String, Number> = HashMap()
 
-
         fun menu() {
             println("Digite o tipo de alimento que deseja incluir na lista")
             println("Verdura")
@@ -58,7 +57,5 @@ class Menu {
 
             }
         }
-
-
     }
 }
