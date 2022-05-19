@@ -69,7 +69,7 @@ class ListaCompras {
                 Menu.menu()
             } else {
                 listaAlimentos.forEach { alimento, quantidade ->
-                    println("$alimento - $quantidade gramas")
+                    println("Nome: $alimento - quantidade: $quantidade ")
                 }
                 println("\nA quantidade de itens a ser comprada é : ${Menu.listaAlimentos.size}\n")
                 Menu.menu()
