@@ -1,12 +1,15 @@
 package menu
 
+import listacompras.ListaCompras
+import listacompras.ListaCompras.Companion.exibirLista
 import listacompras.ListaCompras.Companion.informarNomeAlimento
+import listacompras.ListaCompras.Companion.informarQuantidadeLegumeOutros
 import listacompras.ListaCompras.Companion.informarQuantidadeVerduraGrao
 import kotlin.system.exitProcess
 
 class Menu {
     companion object {
-        private var listaAlimentos: HashMap<String, Number> = HashMap()
+         var listaAlimentos: HashMap<String, Number> = HashMap()
 
 
         fun menu() {
@@ -16,11 +19,19 @@ class Menu {
             println("Grão")
             println("Outros")
             println("Ver lista")
+            println("Limpar lista")
             println("Sair")
-            var alimento = verificarValidacao()
-            while ((alimento != "verdura") && (alimento != "legume") && (alimento != "grão") && (alimento != "grao") && (alimento != "outros") && (alimento != "ver lista") && (alimento != "sair")) {
-                println("Tipo de alimento inválido")
-                alimento = verificarValidacao()
+            val alimento = readln().lowercase()
+
+            if ((alimento != "verdura") &&
+                (alimento != "legume") &&
+                (alimento != "grão") &&
+                (alimento != "grao") &&
+                (alimento != "outros") &&
+                (alimento != "ver lista") &&
+                (alimento != "limpar lista") &&
+                (alimento != "sair")) {
+                throw IllegalArgumentException("Tipo de alimento inválido")
             }
 
             when (alimento) {
@@ -33,11 +44,20 @@ class Menu {
                     menu()
                 }
                 "legume", "outros" -> {
-                    //TODO: terminar de implementar lógica (1/3)
+                    val quantidade = informarQuantidadeLegumeOutros(alimento)
+                    val nome = informarNomeAlimento(alimento)
+
+                    listaAlimentos[nome] = quantidade
+
+                    menu()
                 }
                 "ver lista" -> {
-                    //TODO: terminar de implementar lógica (2/3)
-                    /*listaAlimentos.forEach { alimento, quantidade ->  }*/
+                    exibirLista()
+                    menu()
+                }
+                "limpar lista" -> {
+                    limparLista(listaAlimentos)
+                    menu()
                 }
                 "sair" -> {
                     println("Até breve!")
