@@ -1,6 +1,7 @@
 package menu
 
 import listacompras.ListaCompras.Companion.informarNomeAlimento
+import listacompras.ListaCompras.Companion.informarQuantidadeLegumeOutros
 import listacompras.ListaCompras.Companion.informarQuantidadeVerduraGrao
 import kotlin.system.exitProcess
 
@@ -33,14 +34,14 @@ class Menu {
                     menu()
                 }
                 "legume", "outros" -> {
-                    val quantidade = informarQuantidadeVerduraGrao(alimento)
+                    val quantidade = informarQuantidadeLegumeOutros(alimento)
                     val nome = informarNomeAlimento(alimento)
                     listaAlimentos[nome] = quantidade
                     menu()
                 }
                 "ver lista" -> {
                     //TODO: terminar de implementar lógica (2/3)
-//                    listaAlimentos.forEach { alimento, quantidade ->  }*/
+                    /*listaAlimentos.forEach { alimento, quantidade ->  }*/
                 }
                 "sair" -> {
                     println("Até breve!")

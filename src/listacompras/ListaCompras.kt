@@ -1,4 +1,4 @@
-package listacompras
+package ListaCompras
 
 /*Aqui chamamos de lista de compras apenas para ter as funções específicas da lista de compras que o sistema exige,
 afinal é um sistema de lista de compras. Não confundir com o conceito de List do Kotlin*/
@@ -27,7 +27,7 @@ class ListaCompras {
         }
 
         fun informarNomeAlimento(alimento: String): String {
-            println("Informe o tipo $alimento a ser adicionado na lista: ")
+            println("Informe o nome nome alimento do tipo $alimento a ser adicionado na lista: ")
             val nome = readln()
 
             if (nome.isEmpty() || nome.isBlank()) {
