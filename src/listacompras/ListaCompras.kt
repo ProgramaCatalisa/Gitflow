@@ -73,6 +73,7 @@ class ListaCompras {
                 }
                 println("\nA quantidade de itens a ser comprada é : ${Menu.listaAlimentos.size}\n")
                 Menu.menu()
+
             }
         }
 
