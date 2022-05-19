@@ -26,7 +26,7 @@ class Menu {
                 (alimento != "grao") &&
                 (alimento != "outros") &&
                 (alimento != "ver lista") &&
-                (alimento != "limpar lista")
+                (alimento != "limpar lista") &&
                 (alimento != "sair")) {
                 throw IllegalArgumentException("Tipo de alimento inválido")
             }

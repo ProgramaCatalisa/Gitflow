@@ -62,7 +62,7 @@ class ListaCompras {
 
         fun limparLista(listaAlimentos: HashMap<String, Number>) {
             listaAlimentos.clear()
-            verLista(listaAlimentos)
+            exibirLista()
         }
 
     }
