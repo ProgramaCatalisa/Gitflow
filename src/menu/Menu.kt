@@ -5,6 +5,7 @@ import listacompras.ListaCompras.Companion.exibirLista
 import listacompras.ListaCompras.Companion.informarNomeAlimento
 import listacompras.ListaCompras.Companion.informarQuantidadeLegumeOutros
 import listacompras.ListaCompras.Companion.informarQuantidadeVerduraGrao
+import listacompras.ListaCompras.Companion.limparLista
 import kotlin.system.exitProcess
 
 class Menu {
@@ -21,9 +22,9 @@ class Menu {
             println("Ver lista")
             println("Limpar lista")
             println("Sair")
-            val alimento = readln().lowercase()
+            var alimento = verificarValidacao()
 
-            if ((alimento != "verdura") &&
+            while ((alimento != "verdura") &&
                 (alimento != "legume") &&
                 (alimento != "grão") &&
                 (alimento != "grao") &&
@@ -31,7 +32,8 @@ class Menu {
                 (alimento != "ver lista") &&
                 (alimento != "limpar lista") &&
                 (alimento != "sair")) {
-                throw IllegalArgumentException("Tipo de alimento inválido")
+                println("Tipo de alimento inválido")
+                alimento = verificarValidacao()
             }
 
             when (alimento) {
@@ -71,7 +73,7 @@ class Menu {
                 val imput = readln().lowercase()
                 imput
             } catch (exception: Exception) {
-                println("Opção inválida, tente novamente")
+                println("Inválido, tente novamente")
                 verificarValidacao()
             }
         }
