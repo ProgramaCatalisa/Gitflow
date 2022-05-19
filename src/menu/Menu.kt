@@ -19,10 +19,18 @@ class Menu {
             println("Grão")
             println("Outros")
             println("Ver lista")
+            println("Limpar lista")
             println("Sair")
             val alimento = readln().lowercase()
 
-            if ((alimento != "verdura") && (alimento != "legume") && (alimento != "grão") && (alimento != "grao") && (alimento != "outros") && (alimento != "ver lista") && (alimento != "sair")) {
+            if ((alimento != "verdura") &&
+                (alimento != "legume") &&
+                (alimento != "grão") &&
+                (alimento != "grao") &&
+                (alimento != "outros") &&
+                (alimento != "ver lista") &&
+                (alimento != "limpar lista") &&
+                (alimento != "sair")) {
                 throw IllegalArgumentException("Tipo de alimento inválido")
             }
 
@@ -45,6 +53,10 @@ class Menu {
                 }
                 "ver lista" -> {
                     exibirLista()
+                    menu()
+                }
+                "limpar lista" -> {
+                    limparLista(listaAlimentos)
                     menu()
                 }
                 "sair" -> {
