@@ -60,5 +60,10 @@ class ListaCompras {
             return unidades
         }
 
+        fun limparLista(listaAlimentos: HashMap<String, Number>) {
+            listaAlimentos.clear()
+            verLista(listaAlimentos)
+        }
+
     }
 }
