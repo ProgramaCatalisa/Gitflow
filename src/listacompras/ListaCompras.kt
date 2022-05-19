@@ -1,5 +1,8 @@
 package listacompras
 
+import menu.Menu
+import menu.Menu.Companion.listaAlimentos
+
 /*Aqui chamamos de lista de compras apenas para ter as funções específicas da lista de compras que o sistema exige,
 afinal é um sistema de lista de compras. Não confundir com o conceito de List do Kotlin*/
 class ListaCompras {
@@ -58,6 +61,19 @@ class ListaCompras {
                 }
             }
             return unidades
+        }
+
+        fun exibirLista(){
+            if (listaAlimentos.isEmpty()) {
+                println("Não contém nenhum item na lista")
+                Menu.menu()
+            } else {
+                listaAlimentos.forEach { alimento, quantidade ->
+                    println("$alimento - $quantidade gramas")
+                }
+                println("\nA quantidade de itens a ser comprada é : ${Menu.listaAlimentos.size}\n")
+                Menu.menu()
+            }
         }
 
     }

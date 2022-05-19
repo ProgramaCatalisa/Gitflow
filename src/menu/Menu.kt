@@ -1,12 +1,14 @@
 package menu
 
+import listacompras.ListaCompras
+import listacompras.ListaCompras.Companion.exibirLista
 import listacompras.ListaCompras.Companion.informarNomeAlimento
 import listacompras.ListaCompras.Companion.informarQuantidadeVerduraGrao
 import kotlin.system.exitProcess
 
 class Menu {
     companion object {
-        private var listaAlimentos: HashMap<String, Number> = HashMap()
+         var listaAlimentos: HashMap<String, Number> = HashMap()
 
 
         fun menu() {
@@ -36,9 +38,7 @@ class Menu {
                     //TODO: terminar de implementar lógica (1/3)
                 }
                 "ver lista" -> {
-                listaAlimentos.forEach { alimento, quantidade ->
-                    println("$alimento - $quantidade gramas")
-                }
+                    exibirLista()
                     menu()
                 }
                 "sair" -> {
