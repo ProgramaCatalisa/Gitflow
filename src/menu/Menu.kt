@@ -3,6 +3,7 @@ package menu
 import listacompras.ListaCompras
 import listacompras.ListaCompras.Companion.exibirLista
 import listacompras.ListaCompras.Companion.informarNomeAlimento
+import listacompras.ListaCompras.Companion.informarQuantidadeLegumeOutros
 import listacompras.ListaCompras.Companion.informarQuantidadeVerduraGrao
 import kotlin.system.exitProcess
 
@@ -35,7 +36,12 @@ class Menu {
                     menu()
                 }
                 "legume", "outros" -> {
-                    //TODO: terminar de implementar lógica (1/3)
+                    val quantidade = informarQuantidadeLegumeOutros(alimento)
+                    val nome = informarNomeAlimento(alimento)
+
+                    listaAlimentos[nome] = quantidade
+
+                    menu()
                 }
                 "ver lista" -> {
                     exibirLista()
