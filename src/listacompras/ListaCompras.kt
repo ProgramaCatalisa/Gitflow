@@ -63,6 +63,7 @@ class ListaCompras {
             return unidades
         }
 
+
         fun exibirLista(){
             if (listaAlimentos.isEmpty()) {
                 println("Não contém nenhum item na lista")
@@ -75,6 +76,11 @@ class ListaCompras {
                 menu()
 
             }
+
+        fun limparLista(listaAlimentos: HashMap<String, Number>) {
+            listaAlimentos.clear()
+            exibirLista()
+
         }
 
     }
